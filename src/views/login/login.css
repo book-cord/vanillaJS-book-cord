@@ -1,0 +1,57 @@
+/* login container */
+#loginContainer {
+  width: 450px;
+  height: 420px;
+  background-color: #ffffff;
+  box-shadow: 4px 4px 55px rgba(162, 132, 107, 0.25);
+  border-radius: 24px;
+  position: absolute;
+  top: 200px;
+  left: calc(50vw - 225px);
+}
+#loginContainer > p {
+  margin: 30px;
+  font-size: 38px;
+  font-weight: 800;
+  text-align: center;
+  color: #5b6d5b;
+  cursor: default;
+}
+
+/* social login  */
+#socialLoginContainer {
+  width: 200px;
+  margin: auto;
+}
+#socialLoginContainer img {
+  width: 35px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+/* login input */
+input {
+  width: 360px;
+  height: 36px;
+  margin: 20px 0 0 30px;
+  padding-left: 20px;
+  outline: none;
+  border: none;
+  border-radius: 12px;
+  background-color: #f3d5c0a8;
+}
+
+/* button */
+.buttonContainer {
+  width: 290px;
+  margin: 30px auto;
+}
+.logInButton {
+  background-color: #5b6d5b;
+  color: #f3d5c0a8;
+}
+.signInButton {
+  background-color: #f3d5c0a8;
+  color: #5b6d5b;
+  margin-right: 40px;
+}
