@@ -66,11 +66,12 @@ nav > ul > a > li {
 
 #navLogin {
   margin-top: -15px;
+  margin-left: 30px;
 }
 #navLogin span {
   position: relative;
   top: 13px;
-  left: 53px;
+  left: 30px;
 }
 /* button */
 .logInButton {
@@ -81,7 +82,7 @@ nav > ul > a > li {
   border: none;
   margin: 0 15px 0;
   cursor: pointer;
-  width: 150px;
+  width: 100px;
   height: 40px;
   border-radius: 20px;
 }
