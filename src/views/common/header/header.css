@@ -1,0 +1,106 @@
+/* common */
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+a {
+  text-decoration: none;
+}
+/* header */
+header {
+  width: 100vw;
+  height: 100px;
+  background-color: rgba(243, 213, 192, 0.66);
+  display: flex;
+}
+
+/* Hamburger */
+#menuHamburger {
+  display: inline;
+  width: 30px;
+  cursor: pointer;
+}
+#menuHamburger i {
+  font-size: 30px;
+  color: #5b6d5b;
+  position: absolute;
+  top: 38px;
+  left: 5vw;
+  visibility: hidden;
+}
+
+/* logo */
+#menuLogo {
+  width: 328px;
+  height: 102px;
+  font-size: 70px;
+  font-weight: 800;
+  color: #5b6d5b;
+  position: absolute;
+  top: 16px;
+  left: calc(50vw - 185px);
+  cursor: pointer;
+}
+
+#menuLogo > a > img {
+  width: 100%;
+}
+
+/* nav */
+nav {
+  display: inline;
+  width: 400px;
+  height: 30px;
+  position: absolute;
+  top: 44px;
+  right: 3vw;
+}
+nav ul {
+  display: flex;
+}
+nav > ul > a > li {
+  color: #5b6d5b;
+  margin-left: 30px;
+}
+
+#socialLoginContainer {
+  display: flex;
+}
+
+#navLogin {
+  margin-top: -15px;
+  margin-left: 30px;
+}
+#navLogin span {
+  position: relative;
+  top: 13px;
+  left: 30px;
+}
+/* button */
+.logInButton {
+  background-color: #5b6d5b;
+  color: #f3d5c0a8;
+}
+.button {
+  border: none;
+  margin: 0 15px 0;
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+}
+
+/* 반응형 */
+@media screen and (max-width: 1100px) {
+  header > nav,
+  #navLogin {
+    visibility: hidden;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -9999px;
+    line-height: 0;
+    font-size: 1px;
+    color: transparent;
+  }
+
+  #menuHamburger i {
+    visibility: visible;
+  }
+}
