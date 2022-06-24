@@ -16,9 +16,14 @@ footer {
 }
 
 .footerLinks {
+    display: flex;
     position: absolute;
     top: calc(50% - 12px);
     right: 50px;
+}
+
+.footerLinks li+li {
+    margin-left: 10px;
 }
 
 .footerLogoImage {
@@ -38,9 +43,9 @@ footer {
     background-color: #314232;
 }
 
-.footerButton:last-child {
+/* .footerButton:last-child {
     margin-left: 10px;
-}
+} */
 
 .footerButton i {
     display: inline-block;
