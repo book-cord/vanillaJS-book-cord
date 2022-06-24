@@ -18,15 +18,30 @@
   <body>
     <header></header>
     <main role="main">
-      <div id="loginContainer">
+      <div id="signinContainer">
         <p>welcome<br />[book-cord]</p>
-        <div><input type="text" placeholder="아이디를 입력해 주세요" /></div>
-        <div>
-          <input type="password" placeholder="비밀번호를 입력해 주세요" />
-        </div>
-        <div class="buttonContainer">
-          <button class="signInButton button">Sign In</button>
-        </div>
+        <form>
+          <div>
+            <label for="name">이름</label>
+            <input type="text" placeholder="이름을 입력해 주세요" />
+          </div>
+          <div>
+            <label for="email">이메일</label>
+            <input type="text" placeholder="이메일을 입력해 주세요" />
+          </div>
+          <div>
+            <label for="password">비밀번호</label>
+            <input type="password" placeholder="비밀번호를 입력해 주세요" />
+          </div>
+          <div>
+            <label for="passwordConfirm">비밀번호 확인</label>
+            <input
+              type="password"
+              placeholder="비밀번호를 다시 입력해 주세요"
+            />
+          </div>
+          <button type="submit" class="signInButton button">Sign In</button>
+        </form>
       </div>
     </main>
   </body>

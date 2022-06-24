@@ -1,28 +1,28 @@
 /* Reset CSS */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Inter", sans-serif;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 button {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 button,
 textarea,
 input {
-    font-family: inherit;
-    font-size: 16px;
+  font-family: inherit;
+  font-size: 16px;
 }
 
 button:focus,
@@ -31,14 +31,14 @@ input:focus,
 input:active,
 textarea:focus,
 textarea:active {
-    box-shadow: none;
-    outline: none;
+  box-shadow: none;
+  outline: none;
 }
 
 ul,
 ol,
 li {
-    list-style-type: none;
+  list-style-type: none;
 }
 /* http://meyerweb.com/eric/tools/css/reset/ 
     v2.0 | 20110126
@@ -126,12 +126,12 @@ time,
 mark,
 audio,
 video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -146,46 +146,44 @@ hgroup,
 menu,
 nav,
 section {
-    display: block;
+  display: block;
 }
 
 body {
-    line-height: 1;
+  line-height: 1;
 }
-
 
 blockquote,
 q {
-    quotes: none;
+  quotes: none;
 }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-    content: '';
-    content: none;
+  content: "";
+  content: none;
 }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 button {
-    width: 100%;
-    border: none;
-    padding: 0;
-    font: inherit;
+  width: 100%;
+  border: none;
+  padding: 0;
+  font: inherit;
 }
 
-.ir_text{
-    display: block;
-    overflow: hidden;
-    position: absolute;
-    text-indent: -9999px;
-    line-height: 0;
-    Font-size: 1px;
-    color: transparent;
+.ir_text {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  text-indent: -9999px;
+  line-height: 0;
+  font-size: 1px;
+  color: transparent;
 }
-
