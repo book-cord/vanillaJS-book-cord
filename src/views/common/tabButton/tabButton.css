@@ -7,7 +7,7 @@
   justify-content: center;
 }
 #tabMenu li {
-  margin: 30px 40px;
+  margin: 0px 40px;
   cursor: pointer;
 }
 .tabButton {

@@ -54,7 +54,7 @@ nav {
 nav ul {
   display: flex;
 }
-nav > ul > a > li {
+nav > ul > li > a {
   color: #5b6d5b;
   margin-left: 30px;
   cursor: pointer;
@@ -69,9 +69,10 @@ nav > ul > a > li {
   margin-left: 30px;
 }
 #navLogin span {
+  color: #f3d5c0a8;
   position: relative;
-  top: 13px;
-  left: 30px;
+  top: 11px;
+  left: -2.5px;
 }
 /* button */
 .logInButton {

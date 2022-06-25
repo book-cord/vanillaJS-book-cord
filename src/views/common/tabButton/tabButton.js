@@ -16,13 +16,13 @@ recordLi.classList.add("button");
 myRecordLi.classList.add("tabButton");
 myRecordLi.classList.add("button");
 
-bestSellerLi.textContent = "Best Seller";
-recordLi.textContent = "Go record;";
-myRecordLi.textContent = "My record";
+bestSellerA.textContent = "Best Seller";
+recordA.textContent = "Go record;";
+myRecordA.textContent = "My record";
 
-bestSellerA.appendChild(bestSellerLi);
-recordA.appendChild(recordLi);
-myRecordA.appendChild(myRecordLi);
+bestSellerLi.appendChild(bestSellerA);
+recordLi.appendChild(recordA);
+myRecordLi.appendChild(myRecordA);
 
-tabUl.append(bestSellerA, recordA, myRecordA);
+tabUl.append(bestSellerLi, recordLi, myRecordLi);
 tabMenu.appendChild(tabUl);
