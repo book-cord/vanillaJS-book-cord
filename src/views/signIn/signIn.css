@@ -1,4 +1,7 @@
-/* login container */
+main {
+  height: 780px;
+}
+/* signIn container */
 #signinContainer {
   width: 450px;
   background-color: #ffffff;
@@ -25,12 +28,12 @@ label {
   font-weight: 600;
   color: #5b6d5b;
 }
-/* login input */
+/* signIn input */
 input {
   width: 360px;
   height: 36px;
   margin: 6px 0 0 30px;
-  padding-left: 20px;
+  padding: 0 20px;
   outline: none;
   border: none;
   border-radius: 12px;
