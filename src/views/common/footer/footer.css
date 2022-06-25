@@ -1,7 +1,7 @@
 footer {
   position: relative;
   bottom: 0;
-  width: 100%;
+  width: 100vw;
   height: 100px;
   background-color: #caccb4;
 }
@@ -51,4 +51,14 @@ footer {
 .footerButton .footerButtonName {
   font-size: 12px;
   color: #caccb4;
+}
+
+@media screen and (max-width: 689px) {
+  footer {
+    height: 150px;
+  }
+  .footerLinks {
+    left: calc(50% - 95px);
+    top: 100px;
+  }
 }
