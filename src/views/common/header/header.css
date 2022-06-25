@@ -1,5 +1,4 @@
 /* common */
-
 a {
   text-decoration: none;
 }
@@ -58,6 +57,7 @@ nav ul {
 nav > ul > a > li {
   color: #5b6d5b;
   margin-left: 30px;
+  cursor: pointer;
 }
 
 #socialLoginContainer {

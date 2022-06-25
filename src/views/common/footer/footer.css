@@ -1,56 +1,54 @@
-
-
 footer {
-    position: relative;
-    width: 100%;
-    height: 100px;
-    background-color: #CACCB4; 
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #caccb4;
 }
 
 .footerLogo {
-    position: absolute;
-    top: 11px;
-    left: calc(50vw - 185px);
-    text-align: center;
+  position: absolute;
+  top: 11px;
+  left: calc(50vw - 153px);
+  text-align: center;
 }
 
 .footerLinks {
-    display: flex;
-    position: absolute;
-    top: calc(50% - 12px);
-    right: 50px;
+  display: flex;
+  position: absolute;
+  top: calc(50% - 12px);
+  right: 50px;
 }
 
-.footerLinks li+li {
-    margin-left: 10px;
+.footerLinks li + li {
+  margin-left: 10px;
 }
 
 .footerLogoImage {
-    width: 264px;
-    height: 56px;
+  width: 264px;
+  height: 56px;
 }
 
 .footerCopyRight {
-    font-size: 10px;
-    color: #889B88;
+  font-size: 10px;
+  color: #889b88;
 }
 
 .footerButton {
-    width: 72px;
-    height: 25px;
-    border-radius: 15px;
-    background-color: #314232;
+  width: 72px;
+  height: 25px;
+  border-radius: 15px;
+  background-color: #314232;
 }
 
-
 .footerButton i {
-    display: inline-block;
-    margin-right: 5px;
-    color: #CACCB4;
-    font-size: 14px;
+  display: inline-block;
+  margin-right: 5px;
+  color: #caccb4;
+  font-size: 14px;
 }
 
 .footerButton .footerButtonName {
-    font-size: 12px;
-    color: #CACCB4;
+  font-size: 12px;
+  color: #caccb4;
 }

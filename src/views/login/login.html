@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../common/reset.css" />
     <link rel="stylesheet" href="../common/header/header.css" />
+    <link rel="stylesheet" href="../common/footer/footer.css" />
     <link rel="stylesheet" href="./login.css" />
     <script
       src="https://kit.fontawesome.com/d0a847a6bb.js"
@@ -13,9 +14,32 @@
     ></script>
     <script defer src="../common/header/header.js"></script>
     <script defer src="./login.js"></script>
+    <script defer src="../common/footer/footer.js"></script>
     <title>[book-cord]</title>
   </head>
   <body>
     <header></header>
+    <main role="main">
+      <div id="loginContainer">
+        <p>welcome<br />[book-cord]</p>
+        <div id="socialLoginContainer">
+          <img src="./images/apple.png" alt="appleLogin" />
+          <img src="./images/facebook.png" alt="facebookLogin" />
+          <img src="./images/google.png" alt="googleLogin" />
+          <img src="./images/kakao-talk.png" alt="kakaotalkLogin" />
+        </div>
+        <div><input type="text" placeholder="이메일을 입력해 주세요" /></div>
+        <div>
+          <input type="password" placeholder="비밀번호를 입력해 주세요" />
+        </div>
+        <div class="buttonContainer">
+          <a href="../signIn/signIn.html"
+            ><button class="signInButton button">Sign In</button></a
+          >
+          <a><button class="logInButton button">Log In</button></a>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
   </body>
 </html>

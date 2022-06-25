@@ -39,6 +39,7 @@ navLogin.classList.add("button");
 navLogin.setAttribute("id", "navLogin");
 navLogin.appendChild(span);
 navA.appendChild(navLogin);
+navA.href = "../login/login.html";
 ul.append(homeA, aboutA, reportA, navA);
 nav.appendChild(ul);
 
