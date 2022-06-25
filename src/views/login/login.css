@@ -1,3 +1,6 @@
+main {
+  height: 650px;
+}
 /* login container */
 #loginContainer {
   width: 450px;
@@ -20,7 +23,7 @@
 
 /* social login  */
 #socialLoginContainer {
-  width: 200px;
+  width: 220px;
   margin: auto;
 }
 #socialLoginContainer img {
@@ -34,7 +37,7 @@ input {
   width: 360px;
   height: 36px;
   margin: 20px 0 0 30px;
-  padding-left: 20px;
+  padding: 0 20px;
   outline: none;
   border: none;
   border-radius: 12px;
