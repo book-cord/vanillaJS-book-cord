@@ -1,0 +1,22 @@
+/* tabMenu */
+#tabMenu {
+  margin: 30px 0;
+}
+#tabMenu ul {
+  display: flex;
+  justify-content: center;
+}
+#tabMenu li {
+  margin: 0px 40px;
+  cursor: pointer;
+}
+.tabButton {
+  font-weight: 500;
+  background-color: #999b84;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+}
+.activeButton {
+  background-color: #314232;
+}
