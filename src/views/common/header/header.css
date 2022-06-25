@@ -7,7 +7,6 @@ header {
   width: 100vw;
   height: 100px;
   background-color: rgba(243, 213, 192, 0.66);
-  display: flex;
 }
 
 /* Hamburger */

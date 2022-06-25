@@ -58,3 +58,9 @@ input {
   color: #5b6d5b;
   margin-right: 40px;
 }
+
+@media screen and (min-height: 800px) {
+  footer {
+    position: fixed;
+  }
+}
