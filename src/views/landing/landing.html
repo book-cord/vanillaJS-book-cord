@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../common/header/header.js" defer></script>
+    <link rel="stylesheet" href="../common/header/header.css">
+    <script src="../common/tabButton/tabButton.js" defer></script>
+    <link rel="stylesheet" href="../common/tabButton/tabButton.css">
+    <script src="../common/footer/footer.js" defer></script>
+    <link rel="stylesheet" href="../common/footer/footer.css">
+    <link rel="stylesheet" href="../common/reset.css">
+    <script src="https://kit.fontawesome.com/8f83d1908a.js" crossorigin="anonymous"></script>
+    <script src="./landing.js" defer></script>
+    <link rel="stylesheet" href="landing.css">
+    <title>[book-cord]</title>
+</head>
+<body>
+    <header></header>
+    <main class="mainPage">
+        <div id="tabMenu"></div>
+
+        <div class="carousel">
+
+            <button class="carouselButton carouselButtonLeft isHidden">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <div class="carouselTrackContainer">
+                <ul class="carouselTrack">
+                    <li class="carouselSlide currentSlide">
+                        <img class="carouselImage" src="./images/bookImage1.png" alt="이미지 캐러셀 첫 번째 이미지">
+                    </li>
+                    <li class="carouselSlide">
+                        <img class="carouselImage" src="./images/bookImage2.jpeg" alt="이미지 캐러셀 두 번째 이미지">
+                    </li>
+                    <li class="carouselSlide">
+                        <img class="carouselImage" src="./images/bookImage3.jpeg" alt="이미지 캐러셀 세 번째 이미지">
+                    </li>
+                </ul>
+            </div>
+
+            <button class="carouselButton carouselButtonRight">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+            <div class="carouselNav">
+                <button class="carouselIndicator currentSlide"></button>
+                <button class="carouselIndicator"></button>
+                <button class="carouselIndicator"></button>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+</html>
