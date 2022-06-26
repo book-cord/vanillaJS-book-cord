@@ -27,6 +27,7 @@ const navA = document.createElement("a");
 const navLogin = document.createElement("li");
 const span = document.createElement("span");
 homeA.textContent = "Home";
+homeA.href = "../landing/landing.html";
 aboutA.textContent = "About";
 reportA.textContent = "Report";
 homeLi.appendChild(homeA);
