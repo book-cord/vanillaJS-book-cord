@@ -1,8 +1,8 @@
-const track = document.querySelector('.carousel__track');
+const track = document.querySelector('.carouselTrack');
 const slides = Array.from(track.children);
-const nextButton = document.querySelector('.carousel__button--right');
-const prevButton = document.querySelector('.carousel__button--left');
-const dotsNav = document.querySelector('.carousel__nav');
+const nextButton = document.querySelector('.carouselButtonRight');
+const prevButton = document.querySelector('.carouselButtonLeft');
+const dotsNav = document.querySelector('.carouselNav');
 const dots = Array.from(dotsNav.children);
 
 const slideWidth = slides[0].getBoundingClientRect().width;
@@ -16,33 +16,33 @@ slides.forEach(setSlidePostion);
 
 const moveToSlide = (track, currentSlide, targetSlide) => {
     track.style.transform = `translateX(-${targetSlide.style.left})`;
-    currentSlide.classList.remove('current-slide');
-    targetSlide.classList.add('current-slide');
+    currentSlide.classList.remove('currentSlide');
+    targetSlide.classList.add('currentSlide');
 }
 
 const updateDots = (currentDot, targetDot) => {
-    currentDot.classList.remove('current-slide');
-    targetDot.classList.add('current-slide');
+    currentDot.classList.remove('currentSlide');
+    targetDot.classList.add('currentSlide');
 }
 
 const hideShowArrows = (slides, prevButton, nextButton, targetIndex) => {
     if(targetIndex === 0) {
-        prevButton.classList.add('is-hidden');
-        nextButton.classList.remove('is-hidden');
+        prevButton.classList.add('isHidden');
+        nextButton.classList.remove('isHidden');
     } else if(targetIndex === slides.length - 1) {
-        prevButton.classList.remove('is-hidden');
-        nextButton.classList.add('is-hidden');
+        prevButton.classList.remove('isHidden');
+        nextButton.classList.add('isHidden');
     } else {
-        prevButton.classList.remove('is-hidden');
-        nextButton.classList.remove('is-hidden');
+        prevButton.classList.remove('isHidden');
+        nextButton.classList.remove('isHidden');
     }
 }
 
 
 prevButton.addEventListener('click', () => {
-    const currentSlide = track.querySelector('.current-slide');
+    const currentSlide = track.querySelector('.currentSlide');
     const prevSlide = currentSlide.previousElementSibling;
-    const currentDot = dotsNav.querySelector('.current-slide');
+    const currentDot = dotsNav.querySelector('.currentSlide');
     const prevDot = currentDot.previousElementSibling;
     const prevIndex = slides.findIndex(slide => slide === prevSlide);
     moveToSlide(track, currentSlide, prevSlide);
@@ -52,9 +52,9 @@ prevButton.addEventListener('click', () => {
 
 
 nextButton.addEventListener('click', () => {
-    const currentSlide = track.querySelector('.current-slide');
+    const currentSlide = track.querySelector('.currentSlide');
     const nextSlide = currentSlide.nextElementSibling;
-    const currentDot = dotsNav.querySelector('.current-slide');
+    const currentDot = dotsNav.querySelector('.currentSlide');
     const nextDot = currentDot.nextElementSibling;
     const nextIndex = slides.findIndex(slide => slide === nextSlide);
     moveToSlide(track, currentSlide, nextSlide);
@@ -70,8 +70,8 @@ dotsNav.addEventListener('click', e => {
     
     if(!targetDot) return;
     
-    const currentSlide = track.querySelector('.current-slide');
-    const currentDot = dotsNav.querySelector('.current-slide');
+    const currentSlide = track.querySelector('.currentSlide');
+    const currentDot = dotsNav.querySelector('.currentSlide');
     const targetIndex = dots.findIndex(dot => dot === targetDot);
     const targetSlide = slides[targetIndex];
     moveToSlide(track, currentSlide, targetSlide);
