@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- style -->
+    <link rel="stylesheet" href="../common/reset.css" />
+    <link rel="stylesheet" href="../common/header/header.css" />
+    <link rel="stylesheet" href="../common/footer/footer.css" />
+    <link rel="stylesheet" href="../common/tabButton/tabButton.css" />
+    <link rel="stylesheet" href="./record.css" />
+    <!-- script & fontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/d0a847a6bb.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="../common/header/header.js"></script>
+    <script defer src="../common/footer/footer.js"></script>
+    <script defer src="../common/tabButton/tabButton.js"></script>
+    <script defer src="./record.js"></script>
+    <title>[book-cord]</title>
+  </head>
+  <body>
+    <header></header>
+    <main role="main">
+      <div id="tabMenu"></div>
+      <section>
+        <h2 class="ir_text">독서 기록</h2>
+        <div class="inputContainer">
+          <div class="title">
+            <div class="label">제목</div>
+            <input type="text" id="title" />
+          </div>
+          <div class="author">
+            <div class="label">작가</div>
+            <input type="text" id="author" />
+          </div>
+        </div>
+        <textarea id="contents"></textarea>
+        <a
+          ><button id="recordButton" class="recordButton button">
+            record
+          </button></a
+        >
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
