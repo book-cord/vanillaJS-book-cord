@@ -1,0 +1,136 @@
+main {
+  width: 100%;
+}
+
+/* myBooksection */
+section {
+  width: 810px;
+  margin: auto;
+}
+/* image Container */
+.imageContainer {
+  width: 120px;
+  height: 120px;
+  margin: 50px 10px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 4px 4px 55px rgba(162, 132, 107, 0.25);
+}
+.imageContainer > i {
+  font-size: 80px;
+  position: relative;
+  top: 40px;
+  left: 28px;
+}
+
+/* textContainer */
+.textContainer {
+  display: flex;
+  position: relative;
+  top: -130px;
+  left: 160px;
+}
+#nickName {
+  position: relative;
+  top: -150px;
+  left: 160px;
+  font-size: 28px;
+  font-weight: 500;
+}
+.fa-quote-right {
+  align-self: flex-end;
+}
+#myQuote {
+  margin: 10px 50px;
+}
+
+/* article */
+article {
+  width: 100%;
+  height: 100px;
+  border: 5px solid rgb(85, 26, 26);
+  border-radius: 10px;
+}
+article > ul {
+  width: 100%;
+  display: flex;
+}
+article > ul > li {
+  display: block;
+  width: 50px;
+  height: 90px;
+  padding: 5px 10px;
+  margin-right: 2px;
+  font-size: 14px;
+  text-align: center;
+  background-color: #a55746;
+  color: #fdd8a3;
+  writing-mode: vertical-lr;
+  box-shadow: 2px 1px 6px rgba(0, 0, 0, 0.25);
+  /* 말줄임표 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+article > ul > li:first-of-type {
+  border-radius: 5px 0 0 5px;
+}
+article > ul > li:last-of-type {
+  border-radius: 0 5px 5px 0;
+}
+#myInfo {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: unset;
+}
+
+/* myInfo section */
+#myInfosection {
+  display: none;
+  width: 100%;
+  height: 110%;
+  position: absolute;
+  top: 100px;
+  background-color: rgba(238, 238, 238, 0.863);
+}
+.myInfoContainer {
+  width: 450px;
+  background-color: #fff;
+  border-radius: 24px;
+  margin: 150px auto;
+}
+
+.myInfoContainer h2 {
+  color: #5b6d5b;
+  font-size: 24px;
+  text-align: center;
+  padding: 30px 0;
+}
+form {
+  width: 200px;
+  margin: auto;
+}
+form > div {
+  margin: 20px 0;
+}
+label {
+  display: block;
+  color: #5b6d5b;
+  margin: 10px 0 10px -8px;
+}
+input {
+  width: 100%;
+  height: 36px;
+  outline: none;
+  border: none;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: #f3d5c0a8;
+}
+.modifyButton {
+  position: relative;
+  left: 50px;
+  background-color: #5b6d5b;
+  color: #fff;
+  margin: 20px 0 30px 0;
+}
