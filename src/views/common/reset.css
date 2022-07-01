@@ -184,3 +184,7 @@ button {
   font-size: 1px;
   color: transparent;
 }
+
+main {
+  height: 100vh;
+}
