@@ -11,9 +11,6 @@ section {
 .imageContainer {
   width: 120px;
   height: 120px;
-  /* background-image: url("./images/profile.jpg");
-  background-position: center;
-  background-size: cover; */
   margin: 50px 10px;
   border-radius: 20px;
   overflow: hidden;

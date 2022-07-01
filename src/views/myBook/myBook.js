@@ -43,7 +43,6 @@ if (window.localStorage.length < 16) {
     const value = window.localStorage.getItem(i);
     const parsingValue = JSON.parse(value);
     const randomNum = Math.floor(Math.random() * 7);
-    console.log(randomNum);
 
     let bookLi = document.createElement("li");
     bookLi.textContent = parsingValue.title;
