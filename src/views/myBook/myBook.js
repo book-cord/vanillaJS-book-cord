@@ -7,13 +7,22 @@ myQuote.textContent = existedmyInfo.quote;
 
 const myInfo = document.querySelector("#myInfo");
 const myInfosection = document.querySelector("#myInfosection");
-myInfo.addEventListener("click", (e) => {
-  e.preventDefault();
-  myInfosection.style.display = "block";
-});
+const myInfoContainer = document.querySelector(".myInfoContainer");
 const nickNameInput = document.querySelector("#nickNameInput");
 const quoteInput = document.querySelector("#quoteInput");
 const submitButton = document.querySelector("#submitButton");
+myInfo.addEventListener("click", (e) => {
+  e.preventDefault();
+  myInfosection.style.display = "block";
+  nickNameInput.value = existedmyInfo.nickName;
+  quoteInput.value = existedmyInfo.quote;
+});
+myInfosection.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (e.target == myInfosection) {
+    myInfosection.style.display = "none";
+  }
+});
 
 submitButton.addEventListener("click", (e) => {
   e.preventDefault();
