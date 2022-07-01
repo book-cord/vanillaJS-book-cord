@@ -1,8 +1,27 @@
 const nickName = document.querySelector("#nickName");
 const myQuote = document.querySelector("#myQuote");
 
-nickName.textContent = "됴뎡";
-myQuote.textContent = "Hello, world";
+const existedmyInfo = JSON.parse(localStorage.getItem("myInfo"));
+nickName.textContent = existedmyInfo.nickName;
+myQuote.textContent = existedmyInfo.quote;
+
+const myInfo = document.querySelector("#myInfo");
+const myInfosection = document.querySelector("#myInfosection");
+myInfo.addEventListener("click", (e) => {
+  e.preventDefault();
+  myInfosection.style.display = "block";
+});
+const nickNameInput = document.querySelector("#nickNameInput");
+const quoteInput = document.querySelector("#quoteInput");
+const submitButton = document.querySelector("#submitButton");
+
+submitButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  const newInfo = { nickName: nickNameInput.value, quote: quoteInput.value };
+  localStorage.setItem("myInfo", JSON.stringify(newInfo));
+  myInfosection.style.display = "none";
+  location.reload();
+});
 
 const BGColorArr = [
   "#FCC5C0",
@@ -20,9 +39,8 @@ const BookArticle = document.createElement("article");
 const newBookUl = document.createElement("ul");
 
 if (window.localStorage.length < 16) {
-  for (let i = 0; i < window.localStorage.length; i++) {
-    const key = window.localStorage.key(i);
-    const value = window.localStorage.getItem(key);
+  for (let i = 1; i < window.localStorage.length; i++) {
+    const value = window.localStorage.getItem(i);
     const parsingValue = JSON.parse(value);
     const randomNum = Math.floor(Math.random() * 7);
     console.log(randomNum);
@@ -36,9 +54,8 @@ if (window.localStorage.length < 16) {
 }
 
 if (window.localStorage.length >= 16) {
-  for (let i = 0; i < 16; i++) {
-    const key = window.localStorage.key(i);
-    const value = window.localStorage.getItem(key);
+  for (let i = 1; i < 16; i++) {
+    const value = window.localStorage.getItem(i);
     const parsingValue = JSON.parse(value);
     const randomNum = Math.floor(Math.random() * 7);
 
@@ -49,8 +66,7 @@ if (window.localStorage.length >= 16) {
     bookUl.appendChild(bookLi);
   }
   for (let i = 16; i < window.localStorage.length; i++) {
-    const key = window.localStorage.key(i);
-    const value = window.localStorage.getItem(key);
+    const value = window.localStorage.getItem(i);
     const parsingValue = JSON.parse(value);
     const randomNum = Math.floor(Math.random() * 7);
     let bookLi = document.createElement("li");
