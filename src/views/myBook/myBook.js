@@ -47,8 +47,8 @@ const originArticle = document.querySelector("article");
 const BookArticle = document.createElement("article");
 const newBookUl = document.createElement("ul");
 
-if (window.localStorage.length < 16) {
-  for (let i = 1; i < window.localStorage.length; i++) {
+if (window.localStorage.length - 1 < 16) {
+  for (let i = 1; i < window.localStorage.length - 1; i++) {
     const value = window.localStorage.getItem(i);
     const parsingValue = JSON.parse(value);
     const randomNum = Math.floor(Math.random() * 7);
@@ -57,6 +57,9 @@ if (window.localStorage.length < 16) {
     bookLi.textContent = parsingValue.title;
     bookLi.style.backgroundColor = BGColorArr[randomNum];
     bookLi.style.color = "white";
+    bookLi.addEventListener("click", () => {
+      localStorage.setItem("showItem", value);
+    });
     bookUl.appendChild(bookLi);
   }
 }
@@ -71,9 +74,12 @@ if (window.localStorage.length >= 16) {
     bookLi.textContent = parsingValue.title;
     bookLi.style.backgroundColor = BGColorArr[randomNum];
     bookLi.style.color = "white";
+    bookLi.addEventListener("click", () => {
+      localStorage.setItem("showItem", value);
+    });
     bookUl.appendChild(bookLi);
   }
-  for (let i = 16; i < window.localStorage.length; i++) {
+  for (let i = 16; i < window.localStorage.length - 1; i++) {
     const value = window.localStorage.getItem(i);
     const parsingValue = JSON.parse(value);
     const randomNum = Math.floor(Math.random() * 7);
@@ -81,6 +87,9 @@ if (window.localStorage.length >= 16) {
     bookLi.textContent = parsingValue.title;
     bookLi.style.backgroundColor = BGColorArr[randomNum];
     bookLi.style.color = "white";
+    bookLi.addEventListener("click", () => {
+      localStorage.setItem("showItem", value);
+    });
     newBookUl.appendChild(bookLi);
     BookArticle.appendChild(newBookUl);
   }
