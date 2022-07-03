@@ -34,6 +34,7 @@ function makeLists(bookTitle, bookTitleKey) {
 
   recordList.addEventListener("click", () => {
     localStorage.setItem("showItem", value);
+    location.href = "../uniRecord/unitRecord.html";
   });
 
   icons.append(writeIcon, deleteIcon);

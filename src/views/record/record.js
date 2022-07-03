@@ -1,4 +1,4 @@
-const id = window.localStorage.length;
+const id = window.localStorage.length - 2;
 
 const button = document.querySelector("#recordButton");
 button.addEventListener("click", (e) => {

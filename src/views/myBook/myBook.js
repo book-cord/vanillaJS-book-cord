@@ -59,12 +59,13 @@ if (window.localStorage.length - 1 < 16) {
     bookLi.style.color = "white";
     bookLi.addEventListener("click", () => {
       localStorage.setItem("showItem", value);
+      location.href = "../uniRecord/unitRecord.html";
     });
     bookUl.appendChild(bookLi);
   }
 }
 
-if (window.localStorage.length >= 16) {
+if (window.localStorage.length - 2 >= 16) {
   for (let i = 1; i < 16; i++) {
     const value = window.localStorage.getItem(i);
     const parsingValue = JSON.parse(value);
@@ -76,6 +77,7 @@ if (window.localStorage.length >= 16) {
     bookLi.style.color = "white";
     bookLi.addEventListener("click", () => {
       localStorage.setItem("showItem", value);
+      location.href = "../uniRecord/unitRecord.html";
     });
     bookUl.appendChild(bookLi);
   }
@@ -89,6 +91,7 @@ if (window.localStorage.length >= 16) {
     bookLi.style.color = "white";
     bookLi.addEventListener("click", () => {
       localStorage.setItem("showItem", value);
+      location.href = "../uniRecord/unitRecord.html";
     });
     newBookUl.appendChild(bookLi);
     BookArticle.appendChild(newBookUl);
