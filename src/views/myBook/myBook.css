@@ -67,6 +67,7 @@ article > ul > li {
   color: #fdd8a3;
   writing-mode: vertical-lr;
   box-shadow: 2px 1px 6px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
   /* 말줄임표 */
   white-space: nowrap;
   overflow: hidden;
