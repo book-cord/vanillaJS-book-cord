@@ -21,6 +21,7 @@ recordA.textContent = "Go record;";
 myRecordA.textContent = "My record";
 
 recordA.href = "../record/record.html";
+myRecordA.href = '../myRecord/myRecord.html';
 
 bestSellerLi.appendChild(bestSellerA);
 recordLi.appendChild(recordA);
