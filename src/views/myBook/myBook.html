@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../common/reset.css" />
+    <link rel="stylesheet" href="../common/header/header.css" />
+    <link rel="stylesheet" href="../common/footer/footer.css" />
+    <link rel="stylesheet" href="./myBook.css" />
+    <script
+      src="https://kit.fontawesome.com/d0a847a6bb.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="../common/header/header.js"></script>
+    <script defer src="../common/footer/footer.js"></script>
+    <script defer src="./myBook.js"></script>
+    <title>[book-cord]</title>
+  </head>
+  <body>
+    <header></header>
+    <main role="main">
+      <section>
+        <h2 class="ir_text">myProfile</h2>
+        <div class="imageContainer">
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <div id="nickName"></div>
+        <div class="textContainer">
+          <i class="fa-solid fa-quote-left"></i>
+          <p id="myQuote"></p>
+          <i class="fa-solid fa-quote-right"></i>
+        </div>
+        <article>
+          <ul>
+            <li
+              style="writing-mode: horizontal-tb; padding-top: 30px"
+              id="myInfo"
+            >
+              My Info 🔒
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section id="myInfosection">
+        <div class="myInfoContainer">
+          <h2>my Info</h2>
+          <form>
+            <div>
+              <label for="nickName">닉네임</label>
+              <input
+                type="text"
+                placeholder="닉네임을 입력해 주세요"
+                id="nickNameInput"
+              />
+            </div>
+            <div>
+              <label for="quote">소개글</label>
+              <input
+                type="text"
+                placeholder="나를 소개해보아요!"
+                id="quoteInput"
+              />
+            </div>
+            <button type="submit" id="submitButton" class="modifyButton button">
+              변경하기
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
