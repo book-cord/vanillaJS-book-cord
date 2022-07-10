@@ -21,9 +21,12 @@ function makeLists(bookTitle, bookData) {
   const recordList = document.createElement("li");
   const recordListTitle = document.createElement("strong");
   const icons = document.createElement("div");
+  const iconForDelete = document.createElement("div");
+  const iconForWrite = document.createElement("div");
   const writeIcon = document.createElement("i");
   const deleteIcon = document.createElement("i");
 
+  recordList.setAttribute("id", "list");
   recordLists.classList.add("recordLists");
   recordListTitle.classList.add("recordListTitle");
   recordListTitle.textContent = bookTitle;
@@ -32,18 +35,26 @@ function makeLists(bookTitle, bookData) {
   writeIcon.classList.add("fa-pencil");
   deleteIcon.classList.add("fa-solid");
   deleteIcon.classList.add("fa-trash-can");
+  iconForDelete.appendChild(deleteIcon);
+  iconForDelete.setAttribute("id", "delete");
+  iconForWrite.appendChild(writeIcon);
+  iconForWrite.setAttribute("id", "write");
 
-  recordList.addEventListener("click", () => {
-    localStorage.setItem("showItem", JSON.stringify(bookData));
-    location.href = "../uniRecord/unitRecord.html";
-  });
-  deleteIcon.addEventListener("click", () => {
+  iconForDelete.addEventListener("click", () => {
+    console.log("delete");
     const filterData = localStorageData.filter((e) => e.id !== bookData.id);
     localStorage.setItem("record", JSON.stringify(filterData));
     location.reload();
   });
 
-  icons.append(writeIcon, deleteIcon);
+  recordList.addEventListener("click", (e) => {
+    if (e.target.id === "list") {
+      localStorage.setItem("showItem", JSON.stringify(bookData));
+      location.href = "../uniRecord/unitRecord.html";
+    }
+  });
+
+  icons.append(iconForWrite, iconForDelete);
   recordList.append(recordListTitle, icons);
   recordLists.append(recordList);
   main.append(recordLists);
