@@ -1,6 +1,5 @@
 const notAvailablesection = document.querySelector("#notAvailableContainer");
 const notAvailable = document.querySelector(".notAvailable");
-const confirm = document.querySelector(".confirmButton");
 const signInButton = document.querySelector("#signInButton");
 const loginSuccess = document.querySelector("#loginSuccess");
 const socialLoginContainer = document.querySelector("#socialLoginContainer");
@@ -15,16 +14,7 @@ socialLoginContainer.addEventListener("click", (e) => {
     notAvailablesection.style.display = "block";
   }
 });
-confirm.addEventListener("click", (e) => {
-  e.preventDefault();
-  notAvailablesection.style.display = "none";
-});
-notAvailablesection.addEventListener("click", (e) => {
-  e.preventDefault();
-  if (e.target == notAvailablesection) {
-    notAvailablesection.style.display = "none";
-  }
-});
+
 signInButton.addEventListener("click", (e) => {
   e.preventDefault();
   notAvailablesection.style.display = "block";

@@ -29,3 +29,9 @@ myRecordLi.appendChild(myRecordA);
 
 tabUl.append(bestSellerLi, recordLi, myRecordLi);
 tabMenu.appendChild(tabUl);
+
+const notAvailableNow = document.querySelector('#notAvailableContainer');
+
+bestSellerA.addEventListener("click", () => {
+    notAvailableNow.style.display = 'block';
+});

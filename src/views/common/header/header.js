@@ -1,7 +1,11 @@
 const header = document.querySelector("header");
-
+const notAvailableSection = document.querySelector("#notAvailableContainer");
 const hamburger = document.createElement("button");
 hamburger.setAttribute("id", "menuHamburger");
+hamburger.addEventListener("click", (e) => {
+  e.preventDefault();
+  notAvailableSection.style.display = "block";
+});
 const icon = document.createElement("i");
 icon.classList.add("fa-solid");
 icon.classList.add("fa-bars");
@@ -50,13 +54,15 @@ header.append(menuLogo, nav, hamburger);
 
 const localStorageUserData = localStorage.getItem("myInfo");
 
-if(localStorageUserData) {
-    navLogin.classList.add('logInButtonHidden');
-    const userNameList = document.createElement('li');
-    userNameList.classList.add('userNameList');
-    const userName = document.createElement('a');
+if (localStorageUserData) {
+  navLogin.classList.add("logInButtonHidden");
+  const userNameList = document.createElement("li");
+  userNameList.classList.add("userNameList");
+  const userName = document.createElement("a");
 
-    userName.textContent = `[ ${JSON.parse(localStorageUserData).nickName} - cord ]`;
-    userNameList.appendChild(userName);
-    ul.appendChild(userNameList);
+  userName.textContent = `[ ${
+    JSON.parse(localStorageUserData).nickName
+  } - cord ]`;
+  userNameList.appendChild(userName);
+  ul.appendChild(userNameList);
 }
