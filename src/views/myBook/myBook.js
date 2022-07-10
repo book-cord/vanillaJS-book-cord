@@ -42,55 +42,51 @@ const BGColorArr = [
   "#FF8C8C",
 ];
 
+const localStorageData = JSON.parse(localStorage.getItem("record"));
 const bookUl = document.querySelector("article ul");
 const originArticle = document.querySelector("article");
 const BookArticle = document.createElement("article");
 const newBookUl = document.createElement("ul");
 
-if (window.localStorage.length - 1 < 16) {
-  for (let i = 1; i < window.localStorage.length - 1; i++) {
-    const value = window.localStorage.getItem(i);
-    const parsingValue = JSON.parse(value);
+if (localStorageData.length < 16) {
+  for (let i = 0; i < localStorageData.length; i++) {
     const randomNum = Math.floor(Math.random() * 7);
+    console.log(localStorageData[i]);
 
     let bookLi = document.createElement("li");
-    bookLi.textContent = parsingValue.title;
+    bookLi.textContent = localStorageData[i].title;
     bookLi.style.backgroundColor = BGColorArr[randomNum];
     bookLi.style.color = "white";
     bookLi.addEventListener("click", () => {
-      localStorage.setItem("showItem", value);
+      localStorage.setItem("showItem", JSON.stringify(localStorageData[i]));
       location.href = "../uniRecord/unitRecord.html";
     });
     bookUl.appendChild(bookLi);
   }
 }
 
-if (window.localStorage.length - 2 >= 16) {
-  for (let i = 1; i < 16; i++) {
-    const value = window.localStorage.getItem(i);
-    const parsingValue = JSON.parse(value);
+if (localStorageData.length >= 16) {
+  for (let i = 0; i < 16; i++) {
     const randomNum = Math.floor(Math.random() * 7);
 
     let bookLi = document.createElement("li");
-    bookLi.textContent = parsingValue.title;
+    bookLi.textContent = localStorageData[i].title;
     bookLi.style.backgroundColor = BGColorArr[randomNum];
     bookLi.style.color = "white";
     bookLi.addEventListener("click", () => {
-      localStorage.setItem("showItem", value);
+      localStorage.setItem("showItem", JSON.stringify(localStorageData[i]));
       location.href = "../uniRecord/unitRecord.html";
     });
     bookUl.appendChild(bookLi);
   }
-  for (let i = 16; i < window.localStorage.length - 1; i++) {
-    const value = window.localStorage.getItem(i);
-    const parsingValue = JSON.parse(value);
+  for (let i = 16; i < localStorageData.length; i++) {
     const randomNum = Math.floor(Math.random() * 7);
     let bookLi = document.createElement("li");
-    bookLi.textContent = parsingValue.title;
+    bookLi.textContent = localStorageData[i].title;
     bookLi.style.backgroundColor = BGColorArr[randomNum];
     bookLi.style.color = "white";
     bookLi.addEventListener("click", () => {
-      localStorage.setItem("showItem", value);
+      localStorage.setItem("showItem", JSON.stringify(localStorageData[i]));
       location.href = "../uniRecord/unitRecord.html";
     });
     newBookUl.appendChild(bookLi);
