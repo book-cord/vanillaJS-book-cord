@@ -4,18 +4,16 @@ const emptyModal = document.querySelector(".emptyListModal");
 const recordLists = document.createElement("ol");
 
 const localStorageData = JSON.parse(localStorage.getItem("record"));
-console.log(localStorageData.length);
 
-if (localStorageData.length == 0) {
+if (!localStorageData || localStorageData.length == 0) {
   emptyModal.classList.remove("emptyLists");
 } else {
   emptyModal.classList.add("emptyLists");
-}
-
-for (let i = 0; i < localStorageData.length; i++) {
-  const bookData = localStorageData[i];
-  const bookTitle = localStorageData[i].title;
-  makeLists(bookTitle, bookData);
+  for (let i = 0; i < localStorageData.length; i++) {
+    const bookData = localStorageData[i];
+    const bookTitle = localStorageData[i].title;
+    makeLists(bookTitle, bookData);
+  }
 }
 
 function makeLists(bookTitle, bookData) {
