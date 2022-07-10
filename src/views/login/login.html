@@ -22,23 +22,51 @@
     <main role="main">
       <div id="loginContainer">
         <p>welcome<br />[book-cord]</p>
-        <div id="socialLoginContainer">
-          <img src="./images/apple.png" alt="appleLogin" />
-          <img src="./images/facebook.png" alt="facebookLogin" />
-          <img src="./images/google.png" alt="googleLogin" />
-          <img src="./images/kakao-talk.png" alt="kakaotalkLogin" />
-        </div>
-        <div><input type="text" placeholder="이메일을 입력해 주세요" /></div>
+        <ul id="socialLoginContainer">
+          <li><img src="./images/apple.png" alt="appleLogin" id="apple" /></li>
+          <li>
+            <img
+              src="./images/facebook.png"
+              alt="facebookLogin"
+              id="facebook"
+            />
+          </li>
+          <li>
+            <img src="./images/google.png" alt="googleLogin" id="google" />
+          </li>
+          <li>
+            <img
+              src="./images/kakao-talk.png"
+              alt="kakaotalkLogin"
+              id="kakao"
+            />
+          </li>
+        </ul>
         <div>
-          <input type="password" placeholder="비밀번호를 입력해 주세요" />
+          <input
+            type="text"
+            placeholder="닉네임을 입력해 주세요"
+            id="nameInput"
+          />
+        </div>
+        <div>
+          <input
+            type="text"
+            placeholder="당신을 소개해 주세요"
+            id="quoteInput"
+          />
         </div>
         <div class="buttonContainer">
-          <a href="../signIn/signIn.html"
-            ><button class="signInButton button">Sign In</button></a
-          >
-          <a><button class="logInButton button">Log In</button></a>
+          <button id="signInButton" class="signInButton button">Sign In</button>
+          <button id="loginSuccess" class="logInButton button">Log In</button>
         </div>
       </div>
+      <section id="notAvailableContainer">
+        <div class="notAvailable">
+          <h2>⚠️ 아직 준비중인 기능입니다.</h2>
+          <button class="button confirmButton">확인</button>
+        </div>
+      </section>
     </main>
     <footer></footer>
   </body>
