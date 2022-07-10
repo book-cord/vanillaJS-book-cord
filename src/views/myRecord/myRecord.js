@@ -3,25 +3,26 @@ const emptyModal = document.querySelector(".emptyListModal");
 
 const recordLists = document.createElement("ol");
 
-for (let i = 1; i <= localStorage.length - 2; i++) {
-  const bookTitleKey = JSON.parse(localStorage.getItem(i));
-  const bookTitle = bookTitleKey.title;
-  makeLists(bookTitle, bookTitleKey);
-}
+const localStorageData = JSON.parse(localStorage.getItem("record"));
 
-if (!localStorage.getItem(1)) {
+if (!localStorage.getItem("record")) {
   emptyModal.classList.remove("emptyLists");
 } else {
   emptyModal.classList.add("emptyLists");
 }
 
-function makeLists(bookTitle, bookTitleKey) {
+for (let i = 0; i < localStorageData.length; i++) {
+  const bookData = localStorageData[i];
+  const bookTitle = localStorageData[i].title;
+  makeLists(bookTitle, bookData);
+}
+
+function makeLists(bookTitle, bookData) {
   const recordList = document.createElement("li");
   const recordListTitle = document.createElement("strong");
   const icons = document.createElement("div");
   const writeIcon = document.createElement("i");
   const deleteIcon = document.createElement("i");
-  const value = JSON.stringify(bookTitleKey);
 
   recordLists.classList.add("recordLists");
   recordListTitle.classList.add("recordListTitle");
@@ -33,8 +34,13 @@ function makeLists(bookTitle, bookTitleKey) {
   deleteIcon.classList.add("fa-trash-can");
 
   recordList.addEventListener("click", () => {
-    localStorage.setItem("showItem", value);
+    localStorage.setItem("showItem", JSON.stringify(bookData));
     location.href = "../uniRecord/unitRecord.html";
+  });
+  deleteIcon.addEventListener("click", () => {
+    const filterData = localStorageData.filter((e) => e.id !== bookData.id);
+    localStorage.setItem("record", JSON.stringify(filterData));
+    location.reload();
   });
 
   icons.append(writeIcon, deleteIcon);
