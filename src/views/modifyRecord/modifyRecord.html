@@ -15,8 +15,8 @@
     <script defer src="../common/header/header.js"></script>
     <script defer src="../common/tabButton/tabButton.js"></script>
     <script defer src="../common/footer/footer.js"></script>
-    <script defer src="./unitRecord.js"></script>
-    <link rel="stylesheet" href="./unitRecord.css" />
+    <script defer src="./modifyRecord.js"></script>
+    <link rel="stylesheet" href="./modifyRecord.css" />
     <title>[book-cord]</title>
   </head>
   <body>
@@ -26,22 +26,19 @@
       <div id="tabMenu"></div>
       <section>
         <h2 class="ir_text">독서 기록</h2>
-        <div class="recordContainer">
+        <div class="modifyContainer">
           <div class="title">
             <h3 class="label">제목</h3>
-            <strong id="title"></strong>
+            <input id="title"></input>
           </div>
           <div class="author">
             <h3 class="label">작가</h3>
-            <strong id="author"></strong>
+            <input id="author"></input>
           </div>
         </div>
-        <p class="recordContent"></p>
+        <textarea class="modifyContent"></textarea>
       </section>
-      <div class="recordButtons">
-        <button id="editButton" class="recordButton button">Edit</button>
-        <button id="deleteButton" class="recordButton button">Delete</button>
-      </div>
+      <button id="modifyButton" class="modifyButton button">Edit</button>
     </main>
     <footer></footer>
   </body>
