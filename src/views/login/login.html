@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../common/reset.css" />
     <link rel="stylesheet" href="../common/header/header.css" />
+    <link
+      rel="stylesheet"
+      href="../common/notAvailableModal/notAvailableModal.css"
+    />
     <link rel="stylesheet" href="../common/footer/footer.css" />
     <link rel="stylesheet" href="./login.css" />
     <script
@@ -13,6 +17,10 @@
       crossorigin="anonymous"
     ></script>
     <script defer src="../common/header/header.js"></script>
+    <script
+      defer
+      src="../common/notAvailableModal/notAvailableModal.js"
+    ></script>
     <script defer src="./login.js"></script>
     <script defer src="../common/footer/footer.js"></script>
     <title>[book-cord]</title>
@@ -61,12 +69,7 @@
           <button id="loginSuccess" class="logInButton button">Log In</button>
         </div>
       </div>
-      <section id="notAvailableContainer">
-        <div class="notAvailable">
-          <h2>⚠️ 아직 준비중인 기능입니다.</h2>
-          <button class="button confirmButton">확인</button>
-        </div>
-      </section>
+      <section id="notAvailableContainer"></section>
     </main>
     <footer></footer>
   </body>

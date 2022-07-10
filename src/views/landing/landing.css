@@ -81,3 +81,15 @@
 .isHidden {
     display: none;
 }
+
+/* not Available modal */
+#notAvailableContainer {
+    display: none;
+    width: 100%;
+    height: 110%;
+    position: absolute;
+    top: 100px;
+    background-color: rgba(238, 238, 238, 0.863);
+  }
+  
+  
