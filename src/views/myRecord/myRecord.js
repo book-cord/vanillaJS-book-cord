@@ -4,8 +4,9 @@ const emptyModal = document.querySelector(".emptyListModal");
 const recordLists = document.createElement("ol");
 
 const localStorageData = JSON.parse(localStorage.getItem("record"));
+console.log(localStorageData.length);
 
-if (!localStorage.getItem("record")) {
+if (localStorageData.length == 0) {
   emptyModal.classList.remove("emptyLists");
 } else {
   emptyModal.classList.add("emptyLists");
@@ -41,10 +42,13 @@ function makeLists(bookTitle, bookData) {
   iconForWrite.setAttribute("id", "write");
 
   iconForDelete.addEventListener("click", () => {
-    console.log("delete");
     const filterData = localStorageData.filter((e) => e.id !== bookData.id);
     localStorage.setItem("record", JSON.stringify(filterData));
     location.reload();
+  });
+  iconForWrite.addEventListener("click", () => {
+    localStorage.setItem("showItem", JSON.stringify(bookData));
+    location.href = "../modifyRecord/modifyRecord.html";
   });
 
   recordList.addEventListener("click", (e) => {
