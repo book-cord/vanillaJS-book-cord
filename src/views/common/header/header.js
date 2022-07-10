@@ -47,3 +47,16 @@ ul.append(homeLi, aboutLi, myBookLi, navLogin);
 nav.appendChild(ul);
 
 header.append(menuLogo, nav, hamburger);
+
+const localStorageUserData = localStorage.getItem("myInfo");
+
+if(localStorageUserData) {
+    navLogin.classList.add('logInButtonHidden');
+    const userNameList = document.createElement('li');
+    userNameList.classList.add('userNameList');
+    const userName = document.createElement('a');
+
+    userName.textContent = `[ ${JSON.parse(localStorageUserData).nickName} - cord ]`;
+    userNameList.appendChild(userName);
+    ul.appendChild(userNameList);
+}
