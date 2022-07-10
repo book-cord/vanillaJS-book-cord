@@ -87,6 +87,15 @@ nav > ul > li > a {
   border-radius: 20px;
 }
 
+.logInButtonHidden {
+  display: none;
+}
+
+.userNameList {
+  font-weight: 700;
+  pointer-events: none;
+}
+
 /* 반응형 */
 @media screen and (max-width: 1100px) {
   header > nav,
