@@ -51,6 +51,7 @@ const newBookUl = document.createElement("ul");
 if (localStorageData.length < 16) {
   for (let i = 0; i < localStorageData.length; i++) {
     const randomNum = Math.floor(Math.random() * 7);
+    console.log(localStorageData[i]);
 
     let bookLi = document.createElement("li");
     bookLi.textContent = localStorageData[i].title;
