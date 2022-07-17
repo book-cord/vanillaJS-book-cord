@@ -1,0 +1,50 @@
+#title{
+    width: 100vw;
+    height: 100vh;
+}
+
+#thumbnail{
+  width: 300px;
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("./bookcord-before.svg");
+  position: fixed;
+  top: calc(50vh - 300px);
+  left: calc(50vw - 150px);
+}
+#welcomingWords{
+  font-size: 28px;
+  min-width:11px;
+  font-weight: bold;
+
+  white-space: nowrap;
+  margin: 0;
+  position: fixed;
+  color: transparent;
+  top:60vh;
+  left:calc(50vw - 6px);
+  transform: translate(-50%, -50%);
+}
+#welcomingWords::before{
+  content: "welcome [book-cord]";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color:#314231;
+  overflow: hidden;
+  border-right: 1px solid #314231;
+  animation: typing 3.5s steps(32);
+}
+
+@keyframes typing{
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+    
+  }
