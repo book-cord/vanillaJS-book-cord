@@ -9,13 +9,13 @@ socialLoginContainer.addEventListener("click", (e) => {
     e.target.id === "kakao" ||
     e.target.id === "facebook"
   ) {
-    notAvailablesection.style.display = "block";
+    notAvailableSection.style.display = "block";
   }
 });
 
 signInButton.addEventListener("click", (e) => {
   e.preventDefault();
-  notAvailablesection.style.display = "block";
+  notAvailableSection.style.display = "block";
 });
 
 const nameInput = document.querySelector("#nameInput");
