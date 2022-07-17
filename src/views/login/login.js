@@ -1,5 +1,3 @@
-const notAvailablesection = document.querySelector("#notAvailableContainer");
-const notAvailable = document.querySelector(".notAvailable");
 const signInButton = document.querySelector("#signInButton");
 const loginSuccess = document.querySelector("#loginSuccess");
 const socialLoginContainer = document.querySelector("#socialLoginContainer");
@@ -22,10 +20,7 @@ signInButton.addEventListener("click", (e) => {
 
 const nameInput = document.querySelector("#nameInput");
 const quoteInput = document.querySelector("#quoteInput");
-if (localStorage.getItem("myInfo")) {
-  nameInput.value = JSON.parse(localStorage.getItem("myInfo")).nickName;
-  quoteInput.value = JSON.parse(localStorage.getItem("myInfo")).quote;
-}
+
 loginSuccess.addEventListener("click", (e) => {
   const informationData = {
     nickName: nameInput.value,
@@ -34,3 +29,8 @@ loginSuccess.addEventListener("click", (e) => {
   localStorage.setItem("myInfo", JSON.stringify(informationData));
   location.href = "../landing/landing.html";
 });
+
+if (localStorage.getItem("myInfo")) {
+  nameInput.value = JSON.parse(localStorage.getItem("myInfo")).nickName;
+  quoteInput.value = JSON.parse(localStorage.getItem("myInfo")).quote;
+}
