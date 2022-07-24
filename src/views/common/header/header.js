@@ -66,3 +66,14 @@ if (localStorageUserData) {
   userNameList.appendChild(userName);
   ul.appendChild(userNameList);
 }
+
+if (!localStorageUserData) {
+  myBookA.addEventListener("click", (e) => {
+    e.preventDefault();
+    notAvailableSection.style.display = "block";
+    notAvailableH2.textContent = "⚠️ 로그인이 필요한 서비스입니다.";
+    notAvailableButton.addEventListener("click", () => {
+      window.location.href = "../login/login.html";
+    });
+  });
+}
