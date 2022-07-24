@@ -10,6 +10,11 @@
   margin: 0px 40px;
   cursor: pointer;
 }
+
+#tabMenu li {
+  margin: 0px 4vw;
+}
+
 .tabButton {
   font-weight: 500;
   background-color: #999b84;
@@ -20,3 +25,4 @@
 .activeButton {
   background-color: #314232;
 }
+

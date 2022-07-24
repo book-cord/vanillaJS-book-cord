@@ -109,6 +109,10 @@ nav > ul > li > a {
     color: transparent;
   }
 
+  #menuLogo {
+    left: calc(50vw - 156px);
+  }
+
   #menuHamburger i {
     visibility: visible;
   }

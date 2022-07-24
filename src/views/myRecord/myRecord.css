@@ -51,8 +51,7 @@
 }
 
 .emptyListModal {
-  width: 1300px;
-  height: 468px;
+  width: 70vw;
   margin: 0 auto;
   padding: 119px 0 134px 0;
   text-align: center;
@@ -84,3 +83,14 @@
   background-color: rgba(238, 238, 238, 0.863);
 }
 
+@media screen and (max-width: 1100px) {
+
+  .emptyListModal .modalTitle {
+    font-size: 24px;
+    margin-bottom: 85px;
+  }
+
+  .emptyListModal .modalDescription {
+    font-size: 16px;
+  }
+}
