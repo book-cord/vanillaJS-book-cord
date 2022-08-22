@@ -25,15 +25,19 @@
 |초기 로딩 화면|
 |:---:|
 |<img src='https://user-images.githubusercontent.com/92916958/185830470-3ec17317-92c3-49ba-8b90-0ed0e31a08aa.gif' />|
+
 |로그인|
 |:---:|
 |<img src='https://user-images.githubusercontent.com/92916958/185831332-5f9b3b47-eab5-4a9c-8f3f-c3939cd5c52b.gif' />|
+
 |독서기록 작성하기|
 |:---:|
 |<img src='https://user-images.githubusercontent.com/92916958/185831726-6d5eb919-722e-48ba-bec3-412bf57759cd.gif' />|
+
 |독서기록 수정하기|
 |:---:|
 |<img src='https://user-images.githubusercontent.com/92916958/185831940-fc00e066-caaa-449f-8445-4b06630665cb.gif' />|
+
 |독서기록 삭제하기|
 |:---:|
 |<img src='https://user-images.githubusercontent.com/92916958/185832224-a311fc7e-150b-4b9c-bc7b-b39ddbca11fb.gif' />|
